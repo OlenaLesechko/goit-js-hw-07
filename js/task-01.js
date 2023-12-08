@@ -1,3 +1,5 @@
+'use strict'
+
 const allCategories = document.querySelector("ul#categories");
 
 const numberCategories = allCategories.querySelectorAll(".item");
