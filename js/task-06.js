@@ -17,8 +17,6 @@ function createBoxes(amount) {
         box.style.width = `${size}px`;
         box.style.height = `${size}px`;
         box.style.backgroundColor = getRandomHexColor();
-        box.style.display = "flex";
-        box.style.marginTop = "14px";
         box.classList.add("boxes-item");
         newBoxes.appendChild(box);
         size += 10; 

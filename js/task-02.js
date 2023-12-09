@@ -30,16 +30,11 @@ alt: 'Zebras on Zebra',
 },
 ];
 
-const listElem = document.querySelector(".gallery");
-const imageElem = images
-    .map(({ url, alt }) => `<li><img src="${url}" width="340" height="280" alt="${alt}"></li>`)
-    .join("");
-console.log(imageElem);
 
-listElem.insertAdjacentHTML("beforeEnd", imageElem);
+const galleryList = document.querySelector(".gallery");
+ const markup = images.map((image) => `
+<li class="gallery-item">
+<img src="${image.url}" alt="${image.alt}" class="img">
+</li>`).join('');
 
-listElem.style.listStyle = "none";
-listElem.style.display = "flex";
-listElem.style.flexDirection = "column";
-listElem.style.gap = "60px";
-listElem.style.justifyContent = "center";
+galleryList.insertAdjacentHTML("beforeend", markup); 
