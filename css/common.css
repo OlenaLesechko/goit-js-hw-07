@@ -1,38 +1,58 @@
 * {
-  box-sizing: border-box;
-  list-style: none;
+    box-sizing: border-box;
 }
+
 body {
-  margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
+    margin: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+    }
+
+.item {
+    border-radius: 8px;
+    background: #F6F6FE;
 }
-input {
-    padding: 8px;
-    font: inherit;
+
+.item h2 {
+    color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.96px;
 }
-button {
-    padding: 8px 12px;
-    cursor: pointer;
+
+.item ul > li{
+    list-style: none;
+    color: #2E2F42;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    max-width: 360px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5; 
+    letter-spacing: 0.64px;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 1128px;
-    height: 300px;
-    flex-shrink: 0;
     justify-content: center;
     column-gap: 24px;
     row-gap: 48px;
     list-style-type: none;
-
+    padding: 100px 156px;
+    margin: 0 auto;
+    max-width: 1440px;
 }
+
 .gallery-item {
     width: calc((100% - 48px) / 3); 
     box-sizing: border-box; 
@@ -47,32 +67,125 @@ button {
 }
 
 #name-input {
-    border-radius: 4px;
-    border: 1px solid #808080;
     width: 360px;
     height: 40px;
-}
-
-#name-input::placeholder {
-    font-family: 'Montserrat', sans-serif;
+    padding-left: 16px;
+    border-radius: 4px;
+    border: 1px solid #808080;
     color: #2E2F42;
+    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 1.5; 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.64px;
 }
 
-#name-output {
-    font-family: 'Montserrat', sans-serif;
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
     color: #2E2F42;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
 }
 
+.login-form label input {
+    width: 360px;
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+}
+
+.login-form button {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    width: 86px;
+    height: 40px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #4E75FF;
+    outline: transparent;
+    border-color: transparent;
+}
+
+
+.login-form button:hover, 
+.login-form button:focus {
+    background-color: #6C8CFF;  
+}
+
+.widget > p {
+    color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+.widget > button {
+    width: 148px;
+    height: 40px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #4E75FF;
+    outline: transparent;
+    border-color: transparent;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+.widget > button:hover,
+.widget > button:focus {
+    background-color: #6C8CFF;  
+}
+
+#controls {
+    padding: 32px;
+    background-color: #F6F6FE;
+}
+
+#controls > input {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #808080;
+    color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+#controls button {
+    width: 120px;
+    padding: 8px 16px;
+    margin-left: 16px;
+
+    border-radius: 8px;
+    outline: transparent;
+    border-color: transparent;
+}
 
 button[data-create] {
     background: #4E75FF;
@@ -82,19 +195,27 @@ button[data-destroy] {
     background-color: #FF4E4E;
 }
 
-#controls button[data-create]:hover, #controls button[data-create]:focus {
+#controls button[data-create]:hover, 
+#controls button[data-create]:focus {
     background-color: #6C8CFF;  
 }
 
-#controls button[data-destroy]:hover, #controls button[data-destroy]:focus {
+#controls button[data-destroy]:hover, 
+#controls button[data-destroy]:focus {
     background-color: #FF7070;  
 }
+
 #boxes {
     display: flex;
+    overflow: auto;
     padding: 32px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 8px;
     margin-top: 16px;
+    flex-direction: row;
+    gap: 10px;
+    background-color: #F6F6FE;
+}
+
+
+.boxes-item {
+    flex-shrink: 0;
 }
